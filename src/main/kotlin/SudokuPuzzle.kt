@@ -3,6 +3,10 @@ class SudokuPuzzle(
     val grid: MutableList<MutableList<String>>) {
 
     override fun toString(): String {
-        return grid.toString()
+        grid.forEach {
+            println(it)
+        }
+
+        return ""
     }
 }
