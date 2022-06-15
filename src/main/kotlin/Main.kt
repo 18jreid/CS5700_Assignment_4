@@ -19,8 +19,7 @@ fun main(args: Array<String>) {
     val puzzle = sudokuPuzzle.build()
     println(puzzle.toString())
 
-    val backTrack9x9 = BackTrack9x9(puzzle)
-    backTrack9x9.solve()
-
-    backTrack9x9.puzzle.toString()
+    val backTrackStrategy = BackTrackStrategy(puzzle)
+    backTrackStrategy.solve()
+    println(backTrackStrategy.puzzle.size)
 }
