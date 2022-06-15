@@ -1,15 +1,15 @@
 import java.io.File
 
 fun main(args: Array<String>) {
-    val testFile: File = File("SamplePuzzles/Input/Puzzle-9x9-0001.txt")
+    val testFile: File = File("SamplePuzzles/Input/Puzzle-4x4-0002.txt")
     val lines = testFile.readLines()
     val sudokuPuzzle = SudokuPuzzleBuilder()
-        .setSize(lines[0].toInt())
     for (i in lines) {
         if (lines.indexOf(i) == 0) {
-            continue
+            sudokuPuzzle.setSize(i.toInt())
         } else if (lines.indexOf(i) == 1) {
-            continue
+            val list = i.split(" ")
+            sudokuPuzzle.setSymbols(list as MutableList<String>)
         } else {
             val list = i.split(" ")
             sudokuPuzzle.addRow(list as MutableList<String>)

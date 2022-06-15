@@ -1,3 +1,5 @@
+import kotlin.system.exitProcess
+
 class BackTrackStrategy(val puzzle: SudokuPuzzle) {
     val specialNum = Math.sqrt(puzzle.size.toDouble()).toInt()
 
@@ -7,7 +9,7 @@ class BackTrackStrategy(val puzzle: SudokuPuzzle) {
                 if (puzzle.grid[y][x] == "-") {
                     for (n in 1 until puzzle.size + 1) {
                         if (possible(y, x, n)) {
-                            puzzle.grid[y][x] = n.toString()
+                            puzzle.grid[y][x] = puzzle.symbols[n - 1].toString()
                             solve()
                         }
                         puzzle.grid[y][x] = "-"
@@ -17,6 +19,7 @@ class BackTrackStrategy(val puzzle: SudokuPuzzle) {
             }
         }
         puzzle.toString()
+        exitProcess(0)
     }
 
     fun possible(y: Int, x: Int, n: Int): Boolean {
