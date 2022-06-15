@@ -1,7 +1,7 @@
 import java.io.File
 
 fun main(args: Array<String>) {
-    val puzzle = SudokuFileReader("SamplePuzzles/Input/Puzzle-9x9-0001.txt").getPuzzle()
+    val puzzle = SudokuFileReader("SamplePuzzles/Input/Puzzle-16x16-0002.txt").getPuzzle()
 
     println("BEFORE SOLUTION")
     puzzle.toString()
