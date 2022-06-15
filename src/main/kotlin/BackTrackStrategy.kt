@@ -22,6 +22,7 @@ class BackTrackStrategy(var puzzle: SudokuPuzzle) {
         }
         puzzle.toString()
         println()
+        puzzle.isComplete = true
     }
 
     private fun possible(y: Int, x: Int, n: Int): Boolean {
