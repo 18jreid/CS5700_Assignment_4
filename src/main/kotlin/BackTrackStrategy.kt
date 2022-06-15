@@ -19,7 +19,7 @@ class BackTrackStrategy(val puzzle: SudokuPuzzle) {
             }
         }
         puzzle.toString()
-        exitProcess(0)
+        println()
     }
 
     fun possible(y: Int, x: Int, n: Int): Boolean {
@@ -39,7 +39,7 @@ class BackTrackStrategy(val puzzle: SudokuPuzzle) {
 
         for (i in 0 until specialNum) {
             for (j in 0 until specialNum) {
-                if (puzzle.grid[y0+ i][x0 + j] == n.toString()) {
+                if (puzzle.grid[y0+ i][x0 + j] == puzzle.symbols[n - 1].toString()) {
                     return false
                 }
             }

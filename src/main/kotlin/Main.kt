@@ -1,7 +1,7 @@
 import java.io.File
 
 fun main(args: Array<String>) {
-    val testFile: File = File("SamplePuzzles/Input/Puzzle-4x4-0002.txt")
+    val testFile: File = File("SamplePuzzles/Input/Puzzle-16x16-0001.txt")
     val lines = testFile.readLines()
     val sudokuPuzzle = SudokuPuzzleBuilder()
     for (i in lines) {
@@ -21,5 +21,4 @@ fun main(args: Array<String>) {
 
     val backTrackStrategy = BackTrackStrategy(puzzle)
     backTrackStrategy.solve()
-    println(backTrackStrategy.puzzle.size)
 }
