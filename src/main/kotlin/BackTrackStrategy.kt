@@ -6,7 +6,6 @@ class BackTrackStrategy(var puzzle: SudokuPuzzle) {
 
     fun solve() {
         for (y in 0 until puzzle.size) {
-
             for (x in 0 until puzzle.size) {
                 if (puzzle.grid[y][x] == "-") {
                     for (n in 1 until puzzle.size + 1) {
