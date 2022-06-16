@@ -10,7 +10,7 @@ class SudokuPuzzle(
             println(it)
         }
 
-        return ""
+        return grid.toString()
     }
 
     fun checkIfComplete(): Boolean {
